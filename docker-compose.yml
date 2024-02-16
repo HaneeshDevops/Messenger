@@ -1,6 +1,6 @@
 services:
   relatedchat_api:
-    image: relatedcode/relatedchat-api:latest
+    image: clemdev2000/relatedchat-api:latest
     container_name: relatedchat_api
     ports:
       - "4001:4001"
@@ -10,7 +10,7 @@ services:
       - config_files:/app/config
 
   relatedchat_web:
-    image: relatedcode/relatedchat-web:latest
+    image: clemdev2000/relatedchat-web:latest
     container_name: relatedchat_web
     ports:
       - "80:80"
@@ -18,7 +18,7 @@ services:
       - relatedchat_api
 
   gqlserver:
-    image: relatedcode/gqlserver:latest
+    image: clemdev2000/gqlserver:latest
     container_name: gqlserver
     ports:
       - "4000:4000"
@@ -60,7 +60,7 @@ services:
       - config_files:/app/config
 
   gqlserver_admin:
-    image: relatedcode/gqlserver-admin:latest
+    image: clemdev2000/gqlserver-admin:latest
     container_name: gqlserver_admin
     ports:
       - "81:3000"
